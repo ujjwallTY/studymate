@@ -18,9 +18,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Server is missing GEMINI_API_KEY. Set it in your hosting provider\'s environment variables.' });
   }
 
-  // gemini-2.5-flash is on Google's free tier as of 2026. If you hit rate limits,
-  // gemini-2.5-flash-lite has a more generous free-tier quota.
-  const MODEL = 'gemini-2.5-flash';
+  // gemini-3.6-flash is Google's current free-tier flash model (as of 2026).
+  // If this ever gets deprecated too, check https://ai.google.dev/gemini-api/docs/models
+  // for the current recommended free-tier model name.
+  const MODEL = 'gemini-3.6-flash';
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`;
 
   try {
