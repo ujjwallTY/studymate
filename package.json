@@ -1,0 +1,9 @@
+{
+  "name": "studymate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StudyMate — AI study companion for school and college students",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
